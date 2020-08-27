@@ -116,7 +116,7 @@ Class LayerApiRedirect{
         $token = hash_hmac("sha256",$token_string,$this->secret_key);
 
         return [
-            'Authorization'  =>  'Bearer '.$this->access_key.':'.$token,
+            'Authorization'  =>  'Bearer '.$this->access_key.':'.$this->secret_key,
             'X-O-Timestamp'  =>  $time_stamp,
             'Access-Key'    => $this->access_key
         ];
