@@ -117,8 +117,6 @@ Class LayerApiRedirect{
 
         return [
             'Authorization'  =>  'Bearer '.$this->access_key.':'.$this->secret_key,
-            'X-O-Timestamp'  =>  $time_stamp,
-            'Access-Key'    => $this->access_key
         ];
 
     }
